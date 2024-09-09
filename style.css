@@ -1,0 +1,61 @@
+
+body{
+    background-image: url(/Screenshot\ 2024-09-05\ 232407.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.cell{
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    background-color: white;
+}
+#gameContainer{
+    height: 100vh;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    /* position: relative;
+    bottom: 100px; */
+   
+}
+
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid:5px;
+    background-color: blue;
+    border: 5px solid;
+    width: 550px;
+    margin: auto;
+    padding: 9px;
+    border-radius: 20px;
+}
+
+button{
+    cursor: pointer;
+    margin: 0px 22px;
+    width: 30px;
+    height:30px;
+    border: 2px solid;
+  
+  
+}
+#title{
+    font-family: "Press Start 2P";
+    font-size: xx-large;
+   position: relative;
+   top: 25px;
+}
+#name{
+    color: rgb(38, 38, 146);
+    font-size: 50px;
+}
+.cell{
+    margin: 5px;
+}
