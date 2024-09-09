@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- <img src = "download.jpeg" width="150" height="90"> -->
+    <div id="gameContainer">
+        <h1 id="title">Connect <span id="name"> 4</span> Game</h1>
+        <br><br><br>
+        <div id="buttContainer">
+            <button class="choice" id="51" onclick = play(this.id)><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="choice" id="52"onclick = play(this.id)><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="choice" id="53" onclick = play(this.id)><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="choice" id="54" onclick = play(this.id)><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="choice" id="55" onclick = play(this.id)><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="choice" id="56" onclick = play(this.id)><i class="fa-solid fa-arrow-down"></i></button>
+            <button class="choice" id="57" onclick = play(this.id)><i class="fa-solid fa-arrow-down"></i></button>
+        </div>
+        <br>
+        <div id="cellContainer">
+            <div id="0" class="cell" value="0" bord="up"></div>
+            <div id="1" class="cell" value="0"  bord="up"></div>
+            <div id="2" class="cell" value="0" bord="up"></div>
+            <div id="3" class="cell" value="0" bord="up"></div>
+            <div id="4" class="cell" value="0" bord="up"></div>
+            <div id="5" class="cell" value="0" bord="up"></div>
+            <div id="6" class="cell" value="0" bord="up"></div>
+            <div id="7" class="cell" value="0" bord="left"></div>
+            <div id="8" class="cell" value="0" bord="0"></div>
+            <div id="9" class="cell" value="0" bord="0"></div>
+            <div id="10" class="cell" value="0" bord="0"></div>
+            <div id="11" class="cell" value="0" bord="0"></div>
+            <div id="12" class="cell" value="0" bord="0"></div>
+            <div id="13" class="cell" value="0" bord="right"></div>
+            <div id="14" class="cell" value="0" bord="left"></div>
+            <div id="15" class="cell" value="0" bord="0"></div>
+            <div id="16" class="cell" value="0" bord="0"></div>
+            <div id="17" class="cell" value="0" bord="0"></div>
+            <div id="18" class="cell" value="0" bord="0"></div>
+            <div id="19" class="cell" value="0" bord="0"></div>
+            <div id="20" class="cell" value="0" bord="right"></div>
+            <div id="21" class="cell" value="0" bord="left"></div>
+            <div id="22" class="cell" value="0" bord="0"></div>
+            <div id="23" class="cell" value="0" bord="0"></div>
+            <div id="24" class="cell" value="0" bord="0"></div>
+            <div id="25" class="cell" value="0" bord="0"></div>
+            <div id="26" class="cell" value="0" bord="0"></div>
+            <div id="27" class="cell" value="0" bord="right"></div>
+            <div id="28" class="cell" value="0" bord="left"></div>
+            <div id="29" class="cell" value="0" bord="0"></div>
+            <div id="30" class="cell" value="0" bord="0"></div>
+            <div id="31" class="cell" value="0" bord="0"></div>
+            <div id="32" class="cell" value="0" bord="0"></div>
+            <div id="33" class="cell" value="0" bord="0"></div>
+            <div id="34" class="cell"  value="0" bord="right"></div>
+            <div id="35" class="cell"  value="0" bord="left"></div>
+            <div id="36" class="cell"  value="0" bord="1"></div>
+            <div id="37" class="cell"  value="0" bord="1"></div>
+            <div id="38" class="cell"  value="0" bord="1"></div>
+            <div id="39" class="cell"  value="0" bord="1"></div>
+            <div id="40" class="cell"  value="0" bord="1"></div>
+            <div id="41" class="cell"  value="0" bord="right"></div>
+        </div>
+        <script src="function.js"></script>
+    </div>
+</body>
+</html>
