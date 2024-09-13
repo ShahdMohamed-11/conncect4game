@@ -1,4 +1,9 @@
 let cols=[0 ,35,36 ,37,38,39,40,41];
+let start=[0,1,2,3,7,8,9,10,14,15,16,17,21,22,23,24,28,29,30,31,35 ,36,37,38];
+let startcol=[0,7,14,1,8,15,2,9,16,3,10,17,4,11,18,5,12,19,6,13,20];
+let startdiagonal=[3,4,10,5,11,17,6,12,18,13,19,20];
+let startrevdiagonal=[0,8,16,1,9,17,2,10,3,7,15,14]
+
 let currentplayer="red";
 let cell=0;
 let btn=document.querySelectorAll(".choice");
@@ -42,62 +47,20 @@ function play(id){
 
 function checkwin(){
    
-   checkrow();
-   checkcol();
-   checkdaigonal();
-   checkrevdaigonal();
+   checkwinner(start,24,1);
+   checkwinner(startcol,21,7);
+   checkwinner(startdiagonal,12,6);
+   checkwinner(startrevdiagonal,12,8);
    checkdraw();
  
 }
-function checkrow(){
-    let startrow=[0,1,2,3,7,8,9,10,14,15,16,17,21,22,23,24,28,29,30,31,35 ,36,37,38];
-    for(let i=0 ;i<24;i++){
-        let c1=document.getElementById(startrow[i]);
-        let c2=document.getElementById(startrow[i]+1);
-        let c3=document.getElementById(startrow[i]+2);
-        let c4=document.getElementById(startrow[i]+3);
-        if(c1.getAttribute("value")==c2.getAttribute("value")&&c2.getAttribute("value")==c3.getAttribute("value")&&c3.getAttribute("value")==c4.getAttribute("value")&&c1.getAttribute("value")!=0){
-            console.log("win");
-            announcewinner(c1.getAttribute("value"));
-        }
-    }
-}
-function checkcol(){
-    let startcol=[35,28,21,36,29,22,37,30,23,38,31,24,39,32,25,40,33,26,41,34,27];
-    for(let i=0 ;i<21;i++){
-        let c1=document.getElementById(startcol[i]);
-        let c2=document.getElementById(startcol[i]-7);
-        let c3=document.getElementById(startcol[i]-14);
-        let c4=document.getElementById(startcol[i]-21);
-        if(c1.getAttribute("value")==c2.getAttribute("value")&&c2.getAttribute("value")==c3.getAttribute("value")&&c3.getAttribute("value")==c4.getAttribute("value")&&c1.getAttribute("value")!=0){
-            console.log("win");
-          
-            announcewinner(c1.getAttribute("value"));
-        }
-    }
-}
-
-function checkdaigonal(){
-    let startdiagonal=[35,29,23,36,30,24,37,31,38,28,22,21];
-    for(let i=0 ;i<12;i++){
-        let c1=document.getElementById(startdiagonal[i]);
-        let c2=document.getElementById(startdiagonal[i]-6);
-        let c3=document.getElementById(startdiagonal[i]-12);
-        let c4=document.getElementById(startdiagonal[i]-18);
-        if(c1.getAttribute("value")==c2.getAttribute("value")&&c2.getAttribute("value")==c3.getAttribute("value")&&c3.getAttribute("value")==c4.getAttribute("value")&&c1.getAttribute("value")!=0){
-            console.log("win");
-            announcewinner(c1.getAttribute("value"));
-        }
-    }
-}
-
-function checkrevdaigonal(){
-    let startrevdiagonal=[0,8,16,1,9,17,2,10,3,7,15,14]
-    for(let i=0 ;i<12;i++){
-        let c1=document.getElementById(startrevdiagonal[i]);
-        let c2=document.getElementById(startrevdiagonal[i]+8);
-        let c3=document.getElementById(startrevdiagonal[i]+16);
-        let c4=document.getElementById(startrevdiagonal[i]+24);
+function checkwinner(start,length,step){
+   
+    for(let i=0 ;i<length;i++){
+        let c1=document.getElementById(start[i]);
+        let c2=document.getElementById(start[i]+1*step);
+        let c3=document.getElementById(start[i]+2*step);
+        let c4=document.getElementById(start[i]+3*step);
         if(c1.getAttribute("value")==c2.getAttribute("value")&&c2.getAttribute("value")==c3.getAttribute("value")&&c3.getAttribute("value")==c4.getAttribute("value")&&c1.getAttribute("value")!=0){
             console.log("win");
             announcewinner(c1.getAttribute("value"));
